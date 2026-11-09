@@ -1,0 +1,5 @@
+__version__ = "2.0.0"
+APP_NAME = "iPhoneTransfer - PicsVids to PC"
+APP_SHORT = "iPhoneTransfer"
+TAGLINE = "by Year-Month or Album"
+GITHUB_URL = "https://github.com/saroarmstrong/iPhoneTransfer-PicsVidsToPC"
