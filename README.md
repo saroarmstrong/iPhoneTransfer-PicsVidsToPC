@@ -15,6 +15,8 @@ By <b>Year-Month</b> or by <b>Album</b>, with the date in every file name. Free 
 
 ![Transfer screen](docs/images/transfer.png)
 
+![Options: save folder, sorting, folder and file names](docs/images/options.png)
+
 ## Why
 
 Windows Explorer and the Photos app only show a flat `DCIM\100APPLE` mess, choke on big libraries

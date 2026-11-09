@@ -1386,8 +1386,10 @@ class MainWindow(QMainWindow):
         ext = "JPG" if self.heic_cb.isChecked() else "HEIC"
         pre = date_prefix(when, self.file_combo.currentData())
         pre = f"{pre}_" if pre else ""
-        folder = month_folder(when, self.folder_combo.currentData()) if self.tabs.currentIndex() == 0 else "My Album"
-        text = f"Example:  {root}\\{folder}\\{pre}IMG_1234.{ext}"
+        if self.tabs.currentIndex() == 0:    # By Year-Month: save folder, then a month folder
+            text = f"Example:  {root}\\{month_folder(when, self.folder_combo.currentData())}\\{pre}IMG_1234.{ext}"
+        else:                                 # By Album: the last folder is the album's name
+            text = f"Example:  {root}\\{pre}IMG_1234.{ext}"
         if self.tidy_cb.isChecked():
             text += f"\nIf app/web download:  {pre}IMG_123456.JPG"
         self.example_label.setText(text)
